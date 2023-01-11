@@ -1,36 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1673469396501" clover="3.2.0">
-  <project timestamp="1673469396501" name="All files">
-    <metrics statements="24" coveredstatements="22" conditionals="2" coveredconditionals="0" methods="11" coveredmethods="8" elements="37" coveredelements="30" complexity="0" loc="24" ncloc="24" packages="1" files="2" classes="2"/>
+<coverage generated="1673474480682" clover="3.2.0">
+  <project timestamp="1673474480682" name="All files">
+    <metrics statements="25" coveredstatements="25" conditionals="2" coveredconditionals="1" methods="13" coveredmethods="11" elements="40" coveredelements="37" complexity="0" loc="25" ncloc="25" packages="1" files="2" classes="2"/>
     <file name="car.js" path="/Users/caitlinmillar/Documents/coursework/week_07/labs/7.3_CarDealership_Functions/car.js">
       <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
       <line num="1" count="2" type="stmt"/>
-      <line num="2" count="40" type="stmt"/>
-      <line num="3" count="40" type="stmt"/>
-      <line num="4" count="40" type="stmt"/>
+      <line num="2" count="15" type="stmt"/>
+      <line num="3" count="15" type="stmt"/>
+      <line num="4" count="15" type="stmt"/>
       <line num="7" count="2" type="stmt"/>
       <line num="8" count="2" type="stmt"/>
       <line num="9" count="2" type="stmt"/>
       <line num="15" count="2" type="stmt"/>
     </file>
     <file name="dealership.js" path="/Users/caitlinmillar/Documents/coursework/week_07/labs/7.3_CarDealership_Functions/dealership.js">
-      <metrics statements="16" coveredstatements="14" conditionals="2" coveredconditionals="0" methods="7" coveredmethods="4"/>
+      <metrics statements="17" coveredstatements="17" conditionals="2" coveredconditionals="1" methods="9" coveredmethods="7"/>
       <line num="1" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
-      <line num="4" count="9" type="stmt"/>
-      <line num="5" count="9" type="stmt"/>
-      <line num="6" count="9" type="stmt"/>
+      <line num="4" count="8" type="stmt"/>
+      <line num="5" count="8" type="stmt"/>
+      <line num="6" count="8" type="stmt"/>
       <line num="9" count="1" type="stmt"/>
-      <line num="10" count="2" type="stmt"/>
+      <line num="10" count="4" type="stmt"/>
       <line num="11" count="1" type="stmt"/>
-      <line num="12" count="1" type="stmt"/>
+      <line num="12" count="2" type="stmt"/>
       <line num="13" count="1" type="stmt"/>
       <line num="14" count="1" type="stmt"/>
-      <line num="15" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="16" count="0" type="stmt"/>
+      <line num="15" count="2" type="cond" truecount="1" falsecount="1"/>
+      <line num="16" count="2" type="stmt"/>
       <line num="20" count="1" type="stmt"/>
-      <line num="22" count="1" type="stmt"/>
-      <line num="43" count="1" type="stmt"/>
+      <line num="21" count="1" type="stmt"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="42" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

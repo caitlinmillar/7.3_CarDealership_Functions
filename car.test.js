@@ -1,4 +1,10 @@
-const {Car} = require('./car');
+const Car = require('./car');
+
+let newCar;
+
+beforeEach(()=>{
+    newCar = new Car("VroomVroom", 20, 5.2);
+})
 
 describe('testing car class', ()=>{
     test('can get manufacturer', ()=>{

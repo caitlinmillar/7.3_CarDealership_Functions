@@ -17,9 +17,11 @@ Dealership.prototype.addCars = function(car){
     }
 };
 
-const myDealership = new Dealership("My car dealership", 300);
+Dealership.prototype.arrayByManufacturer = function() {
+    return this.cars.map(car => car.manufacturer);
+}
 
-cars = [
+const myDealership = new Dealership("My car dealership", 300, cars = [
     {manufacturer: "FORD", price: 2780, engine: 2.0},
     {manufacturer: "TOYOTA", price: 2780, engine: 2.0},
     {manufacturer: "SEAT", price: 2780, engine: 2.0},
@@ -34,8 +36,8 @@ cars = [
     {manufacturer: "MAZDA", price: 2780, engine: 2.0},
     {manufacturer: "SUZUKI", price: 2780, engine: 2.0},
     {manufacturer: "SKODA", price: 2780, engine: 2.0},
-]
+]);
 
 
-module.exports = {Dealership};
+module.exports = Dealership;
 

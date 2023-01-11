@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80.95% </span>
+                <span class="strong">91.3% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>17/21</span>
+                <span class='fraction'>21/23</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>1/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">57.14% </span>
+                <span class="strong">77.77% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>4/7</span>
+                <span class='fraction'>7/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">87.5% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>14/16</span>
+                <span class='fraction'>17/17</span>
             </div>
         
             
@@ -106,32 +106,30 @@
 <a name='L41'></a><a href='#L41'>41</a>
 <a name='L42'></a><a href='#L42'>42</a>
 <a name='L43'></a><a href='#L43'>43</a>
-<a name='L44'></a><a href='#L44'>44</a>
-<a name='L45'></a><a href='#L45'>45</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L44'></a><a href='#L44'>44</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -164,15 +162,17 @@ Dealership.prototype.getMaxNoOfCars = function(){return this.maxNoOfCars};
 Dealership.prototype.getEngine = <span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return this.stock}</span>;
 Dealership.prototype.countStock = function(){return cars.length};
 Dealership.prototype.getCars = <span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return this.cars}</span>;
-Dealership.prototype.addCars = <span class="fstat-no" title="function not covered" >fu</span>nction(car){
-<span class="cstat-no" title="statement not covered" >    if(this.cars.length &lt; this.getMaxNoOfCars()){</span>
-<span class="cstat-no" title="statement not covered" >        this.cars.push(car);</span>
+Dealership.prototype.addCars = function(car){
+    <span class="missing-if-branch" title="else path not taken" >E</span>if(this.cars.length &lt; this.getMaxNoOfCars()){
+        this.cars.push(car);
     }
 };
 &nbsp;
-const myDealership = new Dealership("My car dealership", 300);
+Dealership.prototype.arrayByManufacturer = function() {
+    return this.cars.map(car =&gt; car.manufacturer);
+}
 &nbsp;
-cars = [
+const myDealership = new Dealership("My car dealership", 300, cars = [
     {manufacturer: "FORD", price: 2780, engine: 2.0},
     {manufacturer: "TOYOTA", price: 2780, engine: 2.0},
     {manufacturer: "SEAT", price: 2780, engine: 2.0},
@@ -187,13 +187,10 @@ cars = [
     {manufacturer: "MAZDA", price: 2780, engine: 2.0},
     {manufacturer: "SUZUKI", price: 2780, engine: 2.0},
     {manufacturer: "SKODA", price: 2780, engine: 2.0},
-]
+]);
 &nbsp;
 &nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-module.exports = {Dealership};
+module.exports = Dealership;
 &nbsp;
 &nbsp;</pre></td></tr></table></pre>
 
@@ -202,7 +199,7 @@ module.exports = {Dealership};
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-01-11T20:36:36.495Z
+                at 2023-01-11T22:01:20.677Z
             </div>
         <script src="prettify.js"></script>
         <script>

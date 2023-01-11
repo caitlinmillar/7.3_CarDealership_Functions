@@ -12,4 +12,4 @@ Car.prototype.getEngine = function(){return this.engine};
 //     return `${this.engine}`
 // }
 
-module.exports = {Car};
+module.exports = Car;

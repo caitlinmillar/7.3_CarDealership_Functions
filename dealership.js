@@ -1,11 +1,14 @@
 const Car = require('./car')
+
 const Dealership = function(name, maxNoOfCars, stock){
     this.name = name;
     this.maxNoOfCars = maxNoOfCars;
     this.stock = stock;
-};
 
-const myDealership = new Dealership("My dealership", 300, 175);
+    this.getName =()=> name;
+    this.getMaxNoOfCars =()=> maxNoOfCars;
+    this.getStock =()=> stock;
+};
 
 cars = [
     {manufacturer: "FORD", price: 2780, engine: 2.0},
@@ -24,7 +27,7 @@ cars = [
     {manufacturer: "SKODA", price: 2780, engine: 2.0},
 ]
 
-const countStock = (stock) => {
-    return stock.length();
-};
+Dealership.prototype.countStock = function(){
+    return this.countStock.length;
+}
 

@@ -21,6 +21,8 @@ Dealership.prototype.arrayByManufacturer = function() {
     return this.cars.map(car => car.manufacturer);
 }
 
+// const arrayMan = cars.filter(car => car.manufacturer === "VOLVO");
+
 const myDealership = new Dealership("My car dealership", 300, cars = [
     {manufacturer: "FORD", price: 2780, engine: 2.0},
     {manufacturer: "TOYOTA", price: 2780, engine: 2.0},

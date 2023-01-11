@@ -22,11 +22,12 @@ describe('testing car class', ()=>{
         const car = new Car("BMW", 5000, 1.4);
         expect(car.getEngine()).toBe(1.4);
     });
+    it('should be able to make new Car objects', ()=>{
+        const car = new Car();
+        expect(car).toBeTruthy();
+    });    
 });
 
-it('should be able to make new Car objects', ()=>{
-    const car = new Car();
-    expect(car).toBeTruthy();
-});
+
 
 

@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1673450304603" clover="3.2.0">
-  <project timestamp="1673450304603" name="All files">
-    <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2" elements="8" coveredelements="8" complexity="0" loc="6" ncloc="6" packages="1" files="2" classes="2"/>
+<coverage generated="1673450912437" clover="3.2.0">
+  <project timestamp="1673450912437" name="All files">
+    <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4" elements="12" coveredelements="12" complexity="0" loc="8" ncloc="8" packages="1" files="2" classes="2"/>
     <file name="car.js" path="/Users/caitlinmillar/Documents/coursework/week_07/labs/7.3_CarDealership_Functions/car.js">
-      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
       <line num="1" count="1" type="stmt"/>
-      <line num="2" count="3" type="stmt"/>
-      <line num="3" count="3" type="stmt"/>
-      <line num="4" count="3" type="stmt"/>
-      <line num="6" count="3" type="stmt"/>
-      <line num="18" count="1" type="stmt"/>
+      <line num="2" count="4" type="stmt"/>
+      <line num="3" count="4" type="stmt"/>
+      <line num="4" count="4" type="stmt"/>
+      <line num="6" count="4" type="stmt"/>
+      <line num="7" count="4" type="stmt"/>
+      <line num="8" count="4" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
     </file>
     <file name="dealership.js" path="/Users/caitlinmillar/Documents/coursework/week_07/labs/7.3_CarDealership_Functions/dealership.js">
       <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>

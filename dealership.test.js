@@ -5,14 +5,23 @@ let car;
 let dealership;
 
 beforeEach(()=>{
-    const car = new Car("BMW", 5000, 1.4);
 });
 
-describe('testing car properties can be accessed', ()=>{
-    const car = new Car("BMW", 5000, 1.4);
-    actual = car.getManufacturer();
-    expected = "BMW";
-    expect(actual).toBe(expected);
+describe('testing car class', ()=>{
+    test('can get manufacturer', ()=>{
+        const car = new Car("BMW", 5000, 1.4);
+        actual = car.getManufacturer();
+        expected = "BMW";
+        expect(actual).toBe(expected);
+    });
+    test('can get price', ()=>{
+        const car = new Car("BMW", 5000, 1.4);
+        expect(car.getPrice()).toBe(5000);
+    });
+    test('can get engine type', ()=>{
+        const car = new Car("BMW", 5000, 1.4);
+        expect(car.getEngine()).toBe(1.4);
+    });
 });
 
 it('should be able to make new Car objects', ()=>{

@@ -2,11 +2,11 @@ const Car = require("./car");
 const Dealership = require("./dealership");
 
 let myDealership;
-let newCar;
+let car;
 
 beforeEach(()=>{
     myDealership = new Dealership("My dealership", 300, []);
-    newCar = new Car("VroomVroom", 20, 5.2);
+    car = new Car("VroomVroom", 20, 5.2);
 })
 
 describe("testing dealership class", ()=>{
@@ -30,15 +30,17 @@ describe('testing dealership functions', ()=>{
     });
     test('get cars by certain manufacturers', ()=>{
         // const myDealership = new Dealership("My dealership", 300);
-        myDealership.addCars(newCar);
-        expect(myDealership.arrayByManufacturer('VroomVroom')).toEqual(14);
+        myDealership.addCars(car);
+        const expected = ["VroomVroom"];
+        const actual = myDealership.arrayByManufacturer();
+        expect(actual).toEqual(expected);
     });
-    test('can add a car to stock', ()=>{
-        // const myDealership = new Dealership("My dealership", 300);
-        const newCar = new Car("VroomVroom", 20, 5.2);
-        myDealership.addCars(newCar);
-        const expected = ["Suzuki"];
+    test('can add a car to dealership', ()=>{
+        myDealership.addCars(car);
+        const expected = 15;
         const actual = myDealership.countStock();
         expect(actual).toEqual(expected);
+        // number is not increasing after adding car
+        // something wrong with with addCars()
     })
 });

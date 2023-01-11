@@ -30,21 +30,21 @@ beforeEach(()=>{
 
 describe("testing dealership class", ()=>{
     test('can get name', ()=>{
-        const myDealership = new Dealership("My dealership", 300, 175);
+        const myDealership = new Dealership("My dealership", 300);
         expect(myDealership.getName()).toBe("My dealership");
     });
     test('can get maximum number of cars', ()=>{
-        const myDealership = new Dealership("My dealership", 300, 175);
+        const myDealership = new Dealership("My dealership", 300);
         expect(myDealership.getMaxNoOfCars()).toBe(300);
     });
     test('can get maximum number of cars', ()=>{
-        const myDealership = new Dealership("My dealership", 300, 175);
-        expect(myDealership.getStock()).toBe(175);
+        const myDealership = new Dealership("My dealership", 300);
+        expect(myDealership.getMaxNoOfCars()).toBe(300);
     });
 });
 describe('testing dealership functions', ()=>{
     test('can get stock count', ()=>{
-        const myDealership = new Dealership("My dealership", 300, 175);
-        expect(dealership.getStockCount()).toBe(5);
+        const myDealership = new Dealership("My dealership", 300);
+        expect(myDealership.countStock()).toEqual(14);
     });
 });

@@ -31,3 +31,5 @@ Dealership.prototype.countStock = function(){
     return this.countStock.length;
 }
 
+module.exports = {Dealership};
+

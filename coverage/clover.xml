@@ -1,20 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1673450968897" clover="3.2.0">
-  <project timestamp="1673450968897" name="All files">
-    <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4" elements="12" coveredelements="12" complexity="0" loc="8" ncloc="8" packages="1" files="2" classes="2"/>
+<coverage generated="1673454511899" clover="3.2.0">
+  <project timestamp="1673454511899" name="All files">
+    <metrics statements="20" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="8" elements="29" coveredelements="27" complexity="0" loc="20" ncloc="20" packages="1" files="2" classes="2"/>
     <file name="car.js" path="/Users/caitlinmillar/Documents/coursework/week_07/labs/7.3_CarDealership_Functions/car.js">
       <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
-      <line num="1" count="1" type="stmt"/>
+      <line num="1" count="2" type="stmt"/>
       <line num="2" count="4" type="stmt"/>
       <line num="3" count="4" type="stmt"/>
       <line num="4" count="4" type="stmt"/>
       <line num="6" count="4" type="stmt"/>
       <line num="7" count="4" type="stmt"/>
       <line num="8" count="4" type="stmt"/>
-      <line num="19" count="1" type="stmt"/>
+      <line num="19" count="2" type="stmt"/>
     </file>
     <file name="dealership.js" path="/Users/caitlinmillar/Documents/coursework/week_07/labs/7.3_CarDealership_Functions/dealership.js">
-      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="12" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="4"/>
+      <line num="1" count="2" type="stmt"/>
+      <line num="3" count="2" type="stmt"/>
+      <line num="4" count="3" type="stmt"/>
+      <line num="5" count="3" type="stmt"/>
+      <line num="6" count="3" type="stmt"/>
+      <line num="8" count="3" type="stmt"/>
+      <line num="9" count="3" type="stmt"/>
+      <line num="10" count="3" type="stmt"/>
+      <line num="13" count="2" type="stmt"/>
+      <line num="30" count="2" type="stmt"/>
+      <line num="31" count="0" type="stmt"/>
+      <line num="34" count="2" type="stmt"/>
     </file>
   </project>
 </coverage>

@@ -17,11 +17,7 @@ Dealership.prototype.addCars = function(car){
     }
 };
 
-Dealership.prototype.arrayByManufacturer = function() {
-    return this.cars.map(car => car.manufacturer);
-}
 
-// const arrayMan = cars.filter(car => car.manufacturer === "VOLVO");
 
 const myDealership = new Dealership("My car dealership", 300, cars = [
     {manufacturer: "FORD", price: 2780, engine: 2.0},
@@ -39,6 +35,17 @@ const myDealership = new Dealership("My car dealership", 300, cars = [
     {manufacturer: "SUZUKI", price: 2780, engine: 2.0},
     {manufacturer: "SKODA", price: 2780, engine: 2.0},
 ]);
+Dealership.prototype.arrayByManufacturer = function() {
+    return cars.map(car => car.manufacturer);
+}
+Dealership.prototype.arrayMan = function(){
+    return cars.filter(car => car.manufacturer === "VOLVO");
+}
+Dealership.prototype.totalCostOfCars = function(){
+    return cars.reduce((accumulator, car) => accumulator + car.price, 0);
+}
+
+
 
 
 module.exports = Dealership;

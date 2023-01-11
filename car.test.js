@@ -1,10 +1,4 @@
 const {Car} = require('./car');
-const {Dealership} = require('./dealership');
-
-let car;
-let dealership;
-
-// beforeEach(()=>{});
 
 describe('testing car class', ()=>{
     test('can get manufacturer', ()=>{

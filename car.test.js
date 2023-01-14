@@ -10,21 +10,17 @@ beforeEach(()=>{
 
 describe('testing car class', ()=>{
     test('can get manufacturer', ()=>{
-        //const car = new Car("BMW", 5000, 1.4);
         const actual = newCar.getManufacturer();
         const expected = "VroomVroom";
         expect(actual).toBe(expected);
     });
     test('can get price', ()=>{
-        // const car = new Car("BMW", 5000, 1.4);
         expect(newCar.getPrice()).toBe(5000);
     });
     test('can get engine type', ()=>{
-        //const car = new Car("BMW", 5000, 1.4);
         expect(newCar.getEngine()).toBe(1.4);
     });
     it('should be able to make new Car objects', ()=>{
-        //const car = new Car();
         expect(newCar).toBeTruthy();
     });    
 });

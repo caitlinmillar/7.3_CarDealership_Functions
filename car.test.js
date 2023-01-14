@@ -10,15 +10,15 @@ beforeEach(()=>{
 
 describe('testing car class', ()=>{
     test('can get manufacturer', ()=>{
-        const actual = newCar.getManufacturer();
+        const actual = newCar.manufacturer;
         const expected = "VroomVroom";
         expect(actual).toBe(expected);
     });
     test('can get price', ()=>{
-        expect(newCar.getPrice()).toBe(5000);
+        expect(newCar.price).toBe(5000);
     });
     test('can get engine type', ()=>{
-        expect(newCar.getEngine()).toBe(1.4);
+        expect(newCar.engine).toBe(1.4);
     });
     it('should be able to make new Car objects', ()=>{
         expect(newCar).toBeTruthy();

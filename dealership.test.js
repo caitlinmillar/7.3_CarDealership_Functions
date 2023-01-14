@@ -1,26 +1,20 @@
-const Car = require("./car");
+const car = require("./car");
 const Dealership = require("./dealership");
 
 let myDealership;
-let car;
 
 beforeEach(()=>{
-    myDealership = new Dealership("My dealership", 300, []);
-    car = new Car("VroomVroom", 20, 5.2);
-})
+    myDealership = new Dealership("My dealership", 300, cars);
+});
 
 describe("testing dealership class", ()=>{
     test('can get name', ()=>{
         // const myDealership = new Dealership("My dealership", 300);
-        expect(myDealership.getName()).toBe("My dealership");
+        expect(myDealership.name).toBe("My dealership");
     });
     test('can get maximum number of cars', ()=>{
         // const myDealership = new Dealership("My dealership", 300);
-        expect(myDealership.getMaxNoOfCars()).toBe(300);
-    });
-    test('can get maximum number of cars', ()=>{
-        // const myDealership = new Dealership("My dealership", 300);
-        expect(myDealership.getMaxNoOfCars()).toBe(300);
+        expect(myDealership.maxNoOfCars).toBe(300);
     });
 });
 
@@ -29,10 +23,9 @@ describe('testing dealership functions', ()=>{
         expect(myDealership.countStock()).toEqual(14);
     });
     test('get an array of manufacturers', ()=>{
-        // const myDealership = new Dealership("My dealership", 300);
-        myDealership.addCars(car);
-        const expected = cars[0];
-        const actual = myDealership.arrayByManufacturer();
+        const expected = [ "FORD", "TOYOTA", "SEAT", "LAND ROVER",
+        "AUDI", "CITREON", "HONDA", "VOLVO", "MINI", "NISSAN", "FIAT", "MAZDA", "SUZUKI", "SKODA",];
+        const actual = myDealership.arrayOfManufacturers();
         expect(actual).toEqual(expected);
     });
     test('find car by manufacturer', ()=>{

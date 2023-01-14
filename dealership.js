@@ -1,23 +1,27 @@
 const Car = require('./car')
 
-const Dealership = function(name, maxNoOfCars){
+// COULD do this to pass in existing stock of cars
+const Dealership = function(name, maxNoOfCars, cars){
     this.name = name;
     this.maxNoOfCars = maxNoOfCars;
-    this.cars = [];
+    this.cars = cars;
 };
 
+// const Dealership = function(name, maxNoOfCars){
+//     this.name = name;
+//     this.maxNoOfCars = maxNoOfCars;
+//     this.cars = [];
+// };
+
+// NOT NECESSARY ?
 Dealership.prototype.getName = function(){return this.name};
 Dealership.prototype.getMaxNoOfCars = function(){return this.maxNoOfCars};
 Dealership.prototype.getEngine = function(){return this.stock};
-Dealership.prototype.countStock = function(){return cars.length};
 Dealership.prototype.getCars = function(){return this.cars};
-Dealership.prototype.addCars = function(car){
-    if(this.cars.length < this.getMaxNoOfCars()){
-        this.cars.push(car);
-    }
-};
 
-
+// Dealership.prototype.addCars = function(car){
+//     return this.cars.length;
+//     }
 
 const myDealership = new Dealership("My car dealership", 300, cars = [
     {manufacturer: "FORD", price: 2780, engine: 2.0},
@@ -35,15 +39,28 @@ const myDealership = new Dealership("My car dealership", 300, cars = [
     {manufacturer: "SUZUKI", price: 2780, engine: 2.0},
     {manufacturer: "SKODA", price: 2780, engine: 2.0},
 ]);
-Dealership.prototype.arrayByManufacturer = function() {
-    return cars.map(car => car.manufacturer);
+
+Dealership.prototype.countStock = function(){
+    return this.cars.length};
+
+Dealership.prototype.addCars = function(car){
+    if(this.cars.length < this.maxNoOfCars){
+        this.cars.push(car);
+    }
+};
+Dealership.prototype.arrayOfManufacturers = function() {
+    return this.cars.map((car) => {
+        return car.manufacturer;
+    });
 }
-Dealership.prototype.arrayMan = function(){
-    return cars.filter(car => car.manufacturer === "VOLVO");
+Dealership.prototype.findFromManufacturor = function(manufacturer){
+    return this.cars.filter((car) => car.manufacturer === manufacturer);
 }
+
 Dealership.prototype.totalCostOfCars = function(){
-    return cars.reduce((accumulator, car) => accumulator + car.price, 0);
+    return this.cars.reduce((accumulator, car) => accumulator + car.price, 0);
 }
+
 
 
 

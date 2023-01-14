@@ -24,7 +24,7 @@ Dealership.prototype.getCars = function(){return this.cars};
 //     }
 
 const myDealership = new Dealership("My car dealership", 300, cars = [
-    {manufacturer: "FORD", price: 2780, engine: 2.0},
+    ford = {manufacturer: "FORD", price: 2780, engine: 2.0},
     {manufacturer: "TOYOTA", price: 2780, engine: 2.0},
     {manufacturer: "SEAT", price: 2780, engine: 2.0},
     {manufacturer: "LAND ROVER", price: 2780, engine: 2.0},
@@ -60,9 +60,6 @@ Dealership.prototype.findFromManufacturor = function(manufacturer){
 Dealership.prototype.totalCostOfCars = function(){
     return this.cars.reduce((accumulator, car) => accumulator + car.price, 0);
 }
-
-
-
 
 
 module.exports = Dealership;

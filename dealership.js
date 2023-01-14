@@ -1,27 +1,18 @@
 const Car = require('./car')
 
-// COULD do this to pass in existing stock of cars
+// HAVE TO do this to pass in existing arrayList of cars
 const Dealership = function(name, maxNoOfCars, cars){
     this.name = name;
     this.maxNoOfCars = maxNoOfCars;
     this.cars = cars;
 };
 
+// THIS IS IF STARTING with an empty array of cars
 // const Dealership = function(name, maxNoOfCars){
 //     this.name = name;
 //     this.maxNoOfCars = maxNoOfCars;
 //     this.cars = [];
 // };
-
-// NOT NECESSARY ?
-Dealership.prototype.getName = function(){return this.name};
-Dealership.prototype.getMaxNoOfCars = function(){return this.maxNoOfCars};
-Dealership.prototype.getEngine = function(){return this.stock};
-Dealership.prototype.getCars = function(){return this.cars};
-
-// Dealership.prototype.addCars = function(car){
-//     return this.cars.length;
-//     }
 
 const myDealership = new Dealership("My car dealership", 300, cars = [
     ford = {manufacturer: "FORD", price: 2780, engine: 2.0},
@@ -43,6 +34,10 @@ const myDealership = new Dealership("My car dealership", 300, cars = [
 Dealership.prototype.countStock = function(){
     return this.cars.length};
 
+// Dealership.prototype.addCars = function(car){
+//     return this.cars.length;
+//     }
+
 Dealership.prototype.addCars = function(car){
     if(this.cars.length < this.maxNoOfCars){
         this.cars.push(car);
@@ -60,6 +55,12 @@ Dealership.prototype.findFromManufacturor = function(manufacturer){
 Dealership.prototype.totalCostOfCars = function(){
     return this.cars.reduce((accumulator, car) => accumulator + car.price, 0);
 }
+
+Dealership.prototype.searchCars = function(query, property){
+    return this.cars.filter((car) => car[property] === query);
+}
+
+
 
 
 module.exports = Dealership;

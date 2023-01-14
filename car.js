@@ -4,8 +4,6 @@ const Car = function (manufacturer, price, engine) {
     this.engine = engine;
 }
 
-
-
 // THIS IS UNNECCESSARY- can just get them by calling them
 // Car.prototype.getManufacturer = function(){return this.manufacturer};
 // Car.prototype.getPrice = function(){return this.price};

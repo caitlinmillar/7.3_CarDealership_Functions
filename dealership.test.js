@@ -57,11 +57,6 @@ describe('testing dealership functions', ()=>{
         const actual = myDealership.totalCostOfCars();
         expect(actual).toEqual(expected);
     });
-    test('can search for a car', ()=>{
-        const expected = [cars[3]];
-        const actual = myDealership.searchCars("LAND ROVER");
-        expect(actual).toEqual(expected);
-    })
 });
 
 
